@@ -2,11 +2,12 @@ code,
 pre {
   font-size: 0.96em;
   background: var(--g7);
+  color: var(--g2);
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   overflow-x: auto;
-  line-height: 1.3;
+  line-height: 1.4;
   tab-size: 2;
   hyphens: none;
   font-family: "Consolas", monospace;
@@ -27,19 +28,18 @@ pre {
 
 :not(pre) > code {
   cursor: text;
-  color: var(--g2);
   padding: 0.1em 0.2em;
   white-space: normal;
 }
 
 .token {
   color: inherit;
-  $d: #9f64e2;
-  $c: #5482e6;
-  $b: #6dafdb;
-  $a: #517d88;
-  $e: #50af7b;
-  $punctuation: rgba(120, 120, 155, 0.72);
+  $tag: $accent;
+  $attrName: tomato;
+  $attrValue: dodgerblue;
+  $b: deeppink;
+  $d: #4a6597;
+  $punctuation: rgba(120, 134, 155, 0.72);
 
   &.comment,
   &.block-comment,
@@ -57,7 +57,7 @@ pre {
   &.namespace,
   &.deleted,
   &.function-name {
-    color: $a;
+    color: $tag;
   }
 
   &.boolean,
@@ -69,8 +69,7 @@ pre {
 
   &.rule,
   &.function {
-    font-weight: $fontWeightHeavy;
-    font-style: italic;
+    font-weight: $fontWeightMedium;
   }
 
   &.attr-name,
@@ -78,8 +77,7 @@ pre {
   &.class-name,
   &.constant,
   &.symbol {
-    color: $c;
-    font-weight: $fontWeightMedium;
+    color: $attrName;
   }
 
   &.selector,
@@ -95,7 +93,7 @@ pre {
   &.atrule,
   &.regex,
   &.variable {
-    color: $e;
+    color: $attrValue;
 
     .rule {
       color: var(--g2);
@@ -105,7 +103,7 @@ pre {
   &.operator,
   &.entity,
   &.url {
-    color: $a;
+    color: $tag;
   }
 
   &.important,

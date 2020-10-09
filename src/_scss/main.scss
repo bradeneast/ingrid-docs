@@ -41,10 +41,28 @@
   outline-offset: $borderWidth;
 }
 
+html {
+  background: var(--g8);
+  color: var(--g1);
+}
+
+html.dark {
+  --g0: #{$g8};
+  --g1: #{$g7};
+  --g2: #{$g6};
+  --g3: #{$g5};
+  --g4: #{$g4};
+  --g5: #{$g3};
+  --g6: #{$g2};
+  --g7: #{$g1};
+  --g8: #{$g0};
+
+  .logo {
+    filter: invert(1);
+  }
+}
+
 body {
-  display: grid;
-  align-content: start;
-  justify-content: start;
   padding-left: $aside;
   min-height: 100vh;
   overflow-x: hidden;
@@ -73,7 +91,8 @@ footer {
   border-top: $borderWidth $borderStyle var(--g7);
 }
 
-img {
+img,
+svg {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -84,3 +103,9 @@ img {
 @import "./aside";
 @import "./utils";
 @import "./prism";
+
+@media screen and (max-width: $mobile) {
+  body {
+    padding-left: 0;
+  }
+}
