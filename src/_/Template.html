@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <Slot name="Title">Ingrid Docs</Slot>
+  </title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap" rel="preload">
+  <link rel="preload" href="/_assets/main.css">
+  <link rel="preload" href="/_assets/main.js">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/_assets/main.css">
+
+  <script defer src="/_assets/main.js"></script>
+</head>
+
+<body>
+  <aside>
+    <div class="logo">
+      <img width="120" height="120" src="/_assets/logo.svg" alt="Ingrid Logo" />
+    </div>
+    <nav>
+      <Each from="/.*" sort="Priority" use="/_/NavItem.html"></Each>
+    </nav>
+  </aside>
+  <main>
+    <h1>
+      <Slot name="Title"></Slot>
+    </h1>
+    <Brick use="./entry.md"></Brick>
+  </main>
+</body>
+
+</html>

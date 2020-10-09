@@ -1,0 +1,23 @@
+{
+  "name": "ingrid-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradeneast/ingrid-docs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bradeneast/ingrid-docs/issues"
+  },
+  "homepage": "https://github.com/bradeneast/ingrid-docs#readme",
+  "devDependencies": {
+    "ingrid-ssg": "^0.2.4"
+  }
+}

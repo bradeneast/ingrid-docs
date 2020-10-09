@@ -1,0 +1,17 @@
+.grid {
+  display: grid;
+  gap: 4em;
+  margin-bottom: 4em;
+  grid-template-columns: repeat(auto-fill, minmax(calc(12rem + 14vw), 1fr));
+  align-items: start;
+  justify-items: start;
+
+  & > * {
+    margin-top: 0;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+}

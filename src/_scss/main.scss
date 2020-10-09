@@ -1,0 +1,86 @@
+@import "./variables";
+
+:root {
+  --g0: #{$g0};
+  --g1: #{$g1};
+  --g2: #{$g2};
+  --g3: #{$g3};
+  --g4: #{$g4};
+  --g5: #{$g5};
+  --g6: #{$g6};
+  --g7: #{$g7};
+  --g8: #{$g8};
+  --primary: #{$primary};
+  --accent: #{$accent};
+  --fontWeightRegular: #{$fontWeightRegular};
+  --fontWeightMedium: #{$fontWeightMedium};
+  --fontWeightHeavy: #{$fontWeightHeavy};
+  --shadowColor: rgba(0, 0, 0, 0.3);
+  --shadow: 0 0.1rem 0.63rem -0.1rem var(--shadowColor);
+  font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  position: relative;
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  background: none;
+  border: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+}
+
+*:focus {
+  outline: $borderWidth $borderStyle var(--g7);
+  outline-offset: $borderWidth;
+}
+
+body {
+  display: grid;
+  align-content: start;
+  justify-content: start;
+  padding-left: $aside;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  * + * {
+    margin-top: $flow1;
+  }
+}
+
+main {
+  max-width: 48rem;
+  padding: 5vw;
+  padding-top: 0;
+}
+
+.grid,
+.flex {
+  * + * {
+    margin-top: 0;
+  }
+}
+
+footer {
+  align-self: end;
+  padding: $flow1 0;
+  border-top: $borderWidth $borderStyle var(--g7);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+@import "./typography";
+@import "./aside";
+@import "./utils";
+@import "./prism";

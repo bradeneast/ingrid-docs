@@ -1,0 +1,34 @@
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  gap: $flow2;
+  width: $aside;
+  height: 100vh;
+  padding: $flow1;
+  line-height: 1;
+  background: var(--g7);
+
+  .logo {
+    padding: $flow2;
+  }
+}
+
+nav {
+  align-self: end;
+  padding: $flow1 0;
+
+  a {
+    display: block;
+    color: var(--g3);
+  }
+
+  [aria-current] {
+    color: var(--primary);
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
