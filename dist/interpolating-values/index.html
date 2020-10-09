@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Interpolating Values
+  </title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap" rel="preload">
+  <link rel="preload" href="/_assets/main.css">
+  <link rel="preload" href="/_assets/main.js">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/_assets/main.css">
+
+  <script defer src="/_assets/main.js"></script>
+</head>
+
+<body>
+  <aside>
+    <div class="logo">
+      <img width="120" height="120" src="/_assets/logo.svg" alt="Ingrid Logo" />
+    </div>
+    <nav>
+      <a href="/">
+  Getting Started
+</a><a href="/development-mode">
+  Development Mode
+</a><a href="/brick-elements">
+  Brick Elements
+</a><a href="/each-elements">
+  Each Elements
+</a><a href="/interpolating-values">
+  Interpolating Values
+</a>
+    </nav>
+  </aside>
+  <main>
+    <h1>
+      Interpolating Values
+    </h1>
+    <p>Double curly brackets let you access a value that you’ve stored globally or in a Brick property. These are generally less performant than Slots, but are sometimes necessary for things like <code>href</code> or <code>src</code> attributes.</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{FeaturedImage}}<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<h2 id="expressions">Expressions</h2>
+<p>Adding the <code>@</code> symbol before double curly brackets <code>@{{...}}</code> will tell Ingrid to evaluate their contents as a Javascript expression.</p>
+
+  </main>
+</body>
+
+</html>
