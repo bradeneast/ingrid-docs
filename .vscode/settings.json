@@ -1,9 +1,19 @@
 {
+  "liveServer.settings.root": "/dist",
   "liveSassCompile.settings.formats": [
     {
       "format": "expanded",
       "extensionName": ".css",
       "savePath": "/dist/_assets"
     }
-  ]
+  ],
+  "saveAndRun": {
+    "commands": [
+      {
+        "cmd": "esbuild ./src/_js/main.js --bundle --minify --outfile=./dist/_assets/main.js",
+        "match": ".*.js",
+        "isAsync": true
+      }
+    ]
+  }
 }
