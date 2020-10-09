@@ -37,7 +37,7 @@
 }
 
 *:focus {
-  outline: $borderWidth $borderStyle var(--g7);
+  outline: $borderWidth $borderStyle var(--accent);
   outline-offset: $borderWidth;
 }
 

@@ -8,8 +8,8 @@
   --g6: #c5cacf;
   --g7: #edeef1;
   --g8: white;
-  --primary: #ce3333;
-  --accent: #ca994f;
+  --primary: #ca994f;
+  --accent: #9e7f50;
   --fontWeightRegular: 400;
   --fontWeightMedium: 500;
   --fontWeightHeavy: 800;
@@ -36,7 +36,7 @@
 }
 
 *:focus {
-  outline: 0.2rem solid var(--g7);
+  outline: 0.2rem solid var(--accent);
   outline-offset: 0.2rem;
 }
 
@@ -386,11 +386,11 @@ pre {
 }
 
 .token.tag, .token.namespace, .token.deleted, .token.function-name {
-  color: #ca994f;
+  color: #9e7f50;
 }
 
 .token.boolean, .token.number, .token.function, .token.inserted {
-  color: deeppink;
+  color: #dda55c;
 }
 
 .token.rule, .token.function {
@@ -398,7 +398,7 @@ pre {
 }
 
 .token.attr-name, .token.property, .token.class-name, .token.constant, .token.symbol {
-  color: tomato;
+  color: #9e4737;
 }
 
 .token.selector, .token.important, .token.keyword, .token.builtin {
@@ -406,7 +406,7 @@ pre {
 }
 
 .token.string, .token.char, .token.attr-value, .token.atrule, .token.regex, .token.variable {
-  color: dodgerblue;
+  color: #7455bd;
 }
 
 .token.string .rule, .token.char .rule, .token.attr-value .rule, .token.atrule .rule, .token.regex .rule, .token.variable .rule {
@@ -414,7 +414,7 @@ pre {
 }
 
 .token.operator, .token.entity, .token.url {
-  color: #ca994f;
+  color: #9e7f50;
 }
 
 .token.important, .token.bold {
