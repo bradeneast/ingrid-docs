@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Lora";
+  src: url("/_assets/lora-bolditalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
 body {
   line-height: 1.63;
   text-rendering: optimizeSpeed;
@@ -44,7 +51,7 @@ h6 {
   font-weight: $fontWeightHeavy;
   margin-top: 1.37em;
   margin-bottom: 0.37em;
-  font-family: "Lora", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI";
+  font-family: "Lora", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
 }
 
 h1 {

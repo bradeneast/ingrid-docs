@@ -39,6 +39,10 @@
 *:focus {
   outline: $borderWidth $borderStyle var(--accent);
   outline-offset: $borderWidth;
+
+  svg {
+    color: var(--accent);
+  }
 }
 
 html {
@@ -91,12 +95,17 @@ footer {
   border-top: $borderWidth $borderStyle var(--g7);
 }
 
-img,
-svg {
+img {
   width: 100%;
   height: auto;
   object-fit: cover;
   object-position: center;
+}
+
+svg {
+  width: auto;
+  height: 100%;
+  height: 2rem;
 }
 
 @import "./typography";
@@ -105,6 +114,9 @@ svg {
 @import "./prism";
 
 @media screen and (max-width: $mobile) {
+  :root {
+    font-size: 16px;
+  }
   body {
     padding-left: 0;
   }

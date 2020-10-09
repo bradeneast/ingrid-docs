@@ -40,6 +40,10 @@
   outline-offset: 0.2rem;
 }
 
+*:focus svg {
+  color: var(--accent);
+}
+
 html {
   background: var(--g8);
   color: var(--g1);
@@ -91,14 +95,26 @@ footer {
   border-top: 0.2rem solid var(--g7);
 }
 
-img,
-svg {
+img {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+svg {
+  width: auto;
+  height: 100%;
+  height: 2rem;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("/_assets/lora-bolditalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
 }
 
 body {
@@ -148,7 +164,7 @@ h6 {
   font-weight: 800;
   margin-top: 1.37em;
   margin-bottom: 0.37em;
-  font-family: "Lora", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI";
+  font-family: "Lora", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
 }
 
 h1 {
@@ -184,6 +200,14 @@ aside .logo {
   z-index: 3;
 }
 
+aside .toggles {
+  margin-top: 2rem;
+}
+
+aside .toggles > * {
+  margin-right: 1em;
+}
+
 #menu-toggle {
   opacity: 0.001;
   position: absolute;
@@ -204,10 +228,6 @@ nav {
       -ms-grid-row-align: end;
       align-self: end;
   padding: 1rem 0;
-}
-
-nav svg {
-  width: 2em;
 }
 
 nav > * {
@@ -434,6 +454,9 @@ pre {
 }
 
 @media screen and (max-width: 54em) {
+  :root {
+    font-size: 16px;
+  }
   body {
     padding-left: 0;
   }

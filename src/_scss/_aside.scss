@@ -17,6 +17,14 @@ aside {
     width: 6em;
     z-index: 3;
   }
+
+  .toggles {
+    margin-top: $flow2;
+
+    & > * {
+      margin-right: 1em;
+    }
+  }
 }
 
 #menu-toggle {
@@ -37,10 +45,6 @@ label[for="menu-toggle"] {
 nav {
   align-self: end;
   padding: $flow1 0;
-
-  svg {
-    width: 2em;
-  }
 
   & > * {
     display: block;
