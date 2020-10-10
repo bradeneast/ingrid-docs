@@ -262,16 +262,12 @@ nav [aria-current]::after {
     gap: 0;
     opacity: 0;
     pointer-events: none;
-    -webkit-transition: 0.2s cubic-bezier(0.3, 0.3, 0.1, 1);
-    transition: 0.2s cubic-bezier(0.3, 0.3, 0.1, 1);
-    -webkit-transition-delay: 1s;
-            transition-delay: 1s;
   }
   #menu-toggle:checked ~ aside {
     opacity: 1;
     pointer-events: all;
-    -webkit-transition-delay: 0s;
-            transition-delay: 0s;
+    -webkit-transition: opacity 0.2s cubic-bezier(0.3, 0.3, 0.1, 1);
+    transition: opacity 0.2s cubic-bezier(0.3, 0.3, 0.1, 1);
   }
   #menu-toggle:checked ~ aside nav > * {
     -webkit-transform: translate3d(0, 0, 0);
@@ -287,10 +283,12 @@ nav [aria-current]::after {
     padding: 1rem 0;
     font-size: 1.4rem;
     margin: 0;
-    -webkit-transform: translate3d(calc(100% + 2rem), 0, 0);
-            transform: translate3d(calc(100% + 2rem), 0, 0);
-    -webkit-transition: 0.63s cubic-bezier(0.4, 0.3, 0.1, 1), color 0.2s cubic-bezier(0.3, 0.3, 0.1, 1);
-    transition: 0.63s cubic-bezier(0.4, 0.3, 0.1, 1), color 0.2s cubic-bezier(0.3, 0.3, 0.1, 1);
+    -webkit-transform: translate3d(100vw, 0, 0);
+            transform: translate3d(100vw, 0, 0);
+    -webkit-transition: color 0.2s cubic-bezier(0.3, 0.3, 0.1, 1), -webkit-transform 0.63s cubic-bezier(0.4, 0.3, 0.1, 1);
+    transition: color 0.2s cubic-bezier(0.3, 0.3, 0.1, 1), -webkit-transform 0.63s cubic-bezier(0.4, 0.3, 0.1, 1);
+    transition: transform 0.63s cubic-bezier(0.4, 0.3, 0.1, 1), color 0.2s cubic-bezier(0.3, 0.3, 0.1, 1);
+    transition: transform 0.63s cubic-bezier(0.4, 0.3, 0.1, 1), color 0.2s cubic-bezier(0.3, 0.3, 0.1, 1), -webkit-transform 0.63s cubic-bezier(0.4, 0.3, 0.1, 1);
     -webkit-transition-delay: calc(var(--delay) * 0.06s), 0s;
             transition-delay: calc(var(--delay) * 0.06s), 0s;
   }
