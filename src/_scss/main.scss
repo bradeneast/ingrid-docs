@@ -117,7 +117,12 @@ svg {
   :root {
     font-size: 16px;
   }
+
   body {
     padding-left: 0;
+  }
+
+  main {
+    padding-bottom: $flow2;
   }
 }

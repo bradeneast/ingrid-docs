@@ -12,7 +12,7 @@
   --accent: #9e7f50;
   --fontWeightRegular: 400;
   --fontWeightMedium: 500;
-  --fontWeightHeavy: 800;
+  --fontWeightHeavy: 700;
   --shadowColor: rgba(0, 0, 0, 0.3);
   --shadow: 0 0.1rem 0.63rem -0.1rem var(--shadowColor);
   font-size: 18px;
@@ -113,7 +113,7 @@ svg {
 @font-face {
   font-family: "Lora";
   src: url("/_assets/lora-bolditalic.woff2") format("woff2"), url("/_assets/lora-bolditalic.ttf") format("ttf");
-  font-weight: 800;
+  font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
@@ -160,8 +160,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lora", serif;
-  font-weight: 800;
+  font-family: "Lora", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
+  font-weight: 700;
   color: var(--g0);
   line-height: 1.2;
   margin-top: 1.37em;
@@ -441,7 +441,7 @@ pre {
 }
 
 .token.important, .token.bold {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .token.italic {
@@ -462,5 +462,8 @@ pre {
   }
   body {
     padding-left: 0;
+  }
+  main {
+    padding-bottom: 2rem;
   }
 }

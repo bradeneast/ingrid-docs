@@ -1,18 +1,12 @@
 {
   "name": "ingrid-docs",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Documentation for the Ingrid static site generator.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bradeneast/ingrid-docs.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Braden East",
   "bugs": {
     "url": "https://github.com/bradeneast/ingrid-docs/issues"
   },
