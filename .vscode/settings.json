@@ -4,14 +4,14 @@
     {
       "format": "expanded",
       "extensionName": ".css",
-      "savePath": "/dist/_assets/docs"
+      "savePath": "/dist/_assets/"
     }
   ],
   "saveAndRun": {
     "commands": [
       {
-        "cmd": "esbuild ./src/_js/docs.js --bundle --minify --outfile=./dist/_assets/docs/docs.js",
-        "match": ".*docs.*.js$",
+        "cmd": "esbuild ./src/_js/docs.js --bundle --minify --outfile=./dist/_assets/main.js",
+        "match": ".*.js$",
         "isAsync": true,
         "silent": true
       }

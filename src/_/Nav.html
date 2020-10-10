@@ -1,49 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<nav>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    Ingrid | Development Mode
-  </title>
-
-  <link rel="preload" as="font" href="/_assets/fonts/lora-bolditalic.woff2">
-  <link rel="preload" as="style" href="/_assets/css/main.css">
-  <link rel="preload" as="script" href="/_assets/js/main.js">
-
-  <link rel="stylesheet" href="/_assets/css/main.css">
-  <script defer src="/_assets/js/main.js"></script>
-</head>
-
-<body>
-
-  <input type="checkbox" id="menu-toggle" />
-  <label for="menu-toggle">
-    <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-      <path d="M14.5 0v15m-3-11.5v3h-7v-3h7zm0 5v3H.5v-3h11z" stroke="currentColor"></path>
-    </svg>
-  </label>
-
-  <aside>
-
-    <div class="logo">
-      <img width="120" height="120" src="/_assets/logo.svg" alt="Ingrid Logo" />
-    </div>
-
-    <nav>
-
-  <a href="/docs">
-  Getting Started
-</a><a href="/docs/development-mode">
-  Development Mode
-</a><a href="/docs/brick-elements">
-  Brick Elements
-</a><a href="/docs/each-elements">
-  Each Elements
-</a><a href="/docs/interpolating-values">
-  Interpolating Values
-</a>
+  <Each from="/.*" sort="Priority" use="/_/NavItem.html"></Each>
 
   <div class="toggles">
     <button id="theme-toggle">
@@ -60,19 +17,3 @@
   </div>
 
 </nav>
-
-  </aside>
-
-  <main>
-    <h1>
-      Development Mode
-    </h1>
-    <p>To use Ingrid’s development mode, just run Ingrid with the <code>-dev</code> flag.</p>
-<pre><code class="language-shell">npx ingrid -dev</code></pre>
-<p>This will start a live server at <a href="http://127.0.0.1:3000/">127.0.0.1:3000</a>, which automatically refreshes when files are modified in your project.</p>
-
-  </main>
-
-</body>
-
-</html>
