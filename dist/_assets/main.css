@@ -112,9 +112,10 @@ svg {
 
 @font-face {
   font-family: "Lora";
-  src: url("/_assets/lora-bolditalic.woff2") format("woff2");
-  font-weight: 700;
+  src: url("/_assets/lora-bolditalic.woff2") format("woff2"), url("/_assets/lora-bolditalic.ttf") format("ttf");
+  font-weight: 800;
   font-style: italic;
+  font-display: swap;
 }
 
 body {
@@ -159,12 +160,12 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Lora", serif;
+  font-weight: 800;
   color: var(--g0);
   line-height: 1.2;
-  font-weight: 800;
   margin-top: 1.37em;
   margin-bottom: 0.37em;
-  font-family: "Lora", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
 }
 
 h1 {
@@ -181,12 +182,14 @@ h2 {
 aside {
   position: fixed;
   top: 0;
+  bottom: 0;
+  right: 0;
   left: 0;
   display: -ms-grid;
   display: grid;
   gap: 2rem;
-  width: 12em;
   height: 100vh;
+  width: 12em;
   margin: 0;
   padding: 1rem;
   line-height: 1;
@@ -217,10 +220,10 @@ aside .toggles > * {
 
 label[for="menu-toggle"] {
   z-index: 10;
-  position: fixed;
+  text-align: right;
+  margin-top: 2rem;
+  margin-right: 1rem;
   display: none;
-  top: 1rem;
-  right: 1rem;
 }
 
 nav {

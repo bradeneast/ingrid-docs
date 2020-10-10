@@ -1,11 +1,13 @@
 aside {
   position: fixed;
   top: 0;
+  bottom: 0;
+  right: 0;
   left: 0;
   display: grid;
   gap: $flow2;
-  width: $aside;
   height: 100vh;
+  width: $aside;
   margin: 0;
   padding: $flow1;
   line-height: 1;
@@ -36,10 +38,10 @@ aside {
 
 label[for="menu-toggle"] {
   z-index: 10;
-  position: fixed;
+  text-align: right;
+  margin-top: $flow2;
+  margin-right: $flow1;
   display: none;
-  top: $flow1;
-  right: $flow1;
 }
 
 nav {

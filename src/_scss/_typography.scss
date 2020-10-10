@@ -1,8 +1,9 @@
 @font-face {
   font-family: "Lora";
-  src: url("/_assets/lora-bolditalic.woff2") format("woff2");
-  font-weight: 700;
+  src: url("/_assets/lora-bolditalic.woff2") format("woff2"), url("/_assets/lora-bolditalic.ttf") format("ttf");
+  font-weight: $fontWeightHeavy;
   font-style: italic;
+  font-display: swap;
 }
 
 body {
@@ -46,12 +47,12 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Lora", serif;
+  font-weight: $fontWeightHeavy;
   color: var(--g0);
   line-height: 1.2;
-  font-weight: $fontWeightHeavy;
   margin-top: 1.37em;
   margin-bottom: 0.37em;
-  font-family: "Lora", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
 }
 
 h1 {
