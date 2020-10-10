@@ -112,7 +112,7 @@ svg {
 
 @font-face {
   font-family: "Lora";
-  src: url("/_assets/lora-bolditalic.woff2") format("woff2"), url("/_assets/lora-bolditalic.ttf") format("ttf");
+  src: url("/_assets/docs/lora-bolditalic.woff2") format("woff2"), url("/_assets/docs/lora-bolditalic.ttf") format("ttf");
   font-weight: 800;
   font-style: italic;
   font-display: swap;

@@ -1,49 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<nav>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    Ingrid | Interpolating Values
-  </title>
-
-  <link rel="preload" as="font" href="/_assets/lora-bolditalic.woff2">
-  <link rel="preload" as="style" href="/_assets/main.css">
-  <link rel="preload" as="script" href="/_assets/main.js">
-
-  <link rel="stylesheet" href="/_assets/main.css">
-  <script defer src="/_assets/main.js"></script>
-</head>
-
-<body>
-
-  <input type="checkbox" id="menu-toggle" />
-  <label for="menu-toggle">
-    <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-      <path d="M14.5 0v15m-3-11.5v3h-7v-3h7zm0 5v3H.5v-3h11z" stroke="currentColor"></path>
-    </svg>
-  </label>
-
-  <aside>
-
-    <div class="logo">
-      <img width="120" height="120" src="/_assets/logo.svg" alt="Ingrid Logo" />
-    </div>
-
-    <nav>
-
-  <a href="/">
-  Getting Started
-</a><a href="/development-mode">
-  Development Mode
-</a><a href="/brick-elements">
-  Brick Elements
-</a><a href="/each-elements">
-  Each Elements
-</a><a href="/interpolating-values">
-  Interpolating Values
-</a>
+  <Each from="/.*" sort="Priority" use="/docs/_/NavItem.html"></Each>
 
   <div class="toggles">
     <button id="theme-toggle">
@@ -60,20 +17,3 @@
   </div>
 
 </nav>
-
-  </aside>
-
-  <main>
-    <h1>
-      Interpolating Values
-    </h1>
-    <p>Double curly brackets let you access a value that you’ve stored globally or in a Brick property. These are generally less performant than Slots, but are sometimes necessary for things like <code>href</code> or <code>src</code> attributes.</p>
-<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{FeaturedImage}}<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
-<h2 id="expressions">Expressions</h2>
-<p>Adding the <code>@</code> symbol before double curly brackets <code>@{{...}}</code> will tell Ingrid to evaluate their contents as a Javascript expression.</p>
-
-  </main>
-
-</body>
-
-</html>

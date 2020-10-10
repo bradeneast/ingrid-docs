@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-    Ingrid | Getting Started
+    Ingrid | Interpolating Values
   </title>
 
-  <link rel="preload" as="font" href="/_assets/lora-bolditalic.woff2">
-  <link rel="preload" as="style" href="/_assets/main.css">
-  <link rel="preload" as="script" href="/_assets/main.js">
+  <link rel="preload" as="font" href="/_assets/fonts/lora-bolditalic.woff2">
+  <link rel="preload" as="style" href="/_assets/css/main.css">
+  <link rel="preload" as="script" href="/_assets/js/main.js">
 
-  <link rel="stylesheet" href="/_assets/main.css">
-  <script defer src="/_assets/main.js"></script>
+  <link rel="stylesheet" href="/_assets/css/main.css">
+  <script defer src="/_assets/js/main.js"></script>
 </head>
 
 <body>
@@ -33,15 +33,15 @@
 
     <nav>
 
-  <a href="/">
+  <a href="/docs">
   Getting Started
-</a><a href="/development-mode">
+</a><a href="/docs/development-mode">
   Development Mode
-</a><a href="/brick-elements">
+</a><a href="/docs/brick-elements">
   Brick Elements
-</a><a href="/each-elements">
+</a><a href="/docs/each-elements">
   Each Elements
-</a><a href="/interpolating-values">
+</a><a href="/docs/interpolating-values">
   Interpolating Values
 </a>
 
@@ -65,17 +65,12 @@
 
   <main>
     <h1>
-      Getting Started
+      Interpolating Values
     </h1>
-    <h2 id="1-do-the-npm-thing-in-a-new-folder">1. Do the npm thing in a new folder</h2>
-<pre><code class="language-shell">npm init -y
-...
-npm i --save-dev ingrid-ssg</code></pre>
-<h2 id="2-run-ingrid">2. Run Ingrid</h2>
-<p><em>Make sure to use <code>npx</code>, not <code>npm</code>, if you’re slightly dyslexic like most of us.</em></p>
-<pre><code class="language-shell">npx ingrid</code></pre>
-<h2 id="3-start-dropping-html-and-markdown-files-in-the-src-folder">3. Start dropping HTML and Markdown files in the <code>src</code> folder.</h2>
-<p>That’s it, yo. If you run into problems, <a href="https://github.com/bradeneast/ingrid/issues">open an issue</a>.</p>
+    <p>Double curly brackets let you access a value that you’ve stored globally or in a Brick property. These are generally less performant than Slots, but are sometimes necessary for things like <code>href</code> or <code>src</code> attributes.</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{FeaturedImage}}<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<h2 id="expressions">Expressions</h2>
+<p>Adding the <code>@</code> symbol before double curly brackets <code>@{{...}}</code> will tell Ingrid to evaluate their contents as a Javascript expression.</p>
 
   </main>
 

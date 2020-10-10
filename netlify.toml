@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://docs.ingrid.com"
+  to = "https://ingrid.com/docs"
+  status = 301
+  force = true
