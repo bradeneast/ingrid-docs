@@ -1,6 +1,8 @@
 <nav>
 
-  <Each from="/.*" sort="Priority" use="/_/NavItem.html"></Each>
+  <ul>
+    <Each from="^/([^/]+/?)?$" sort="Priority" use="/_/NavItem.html"></Each>
+  </ul>
 
   <div class="toggles">
     <button id="theme-toggle">
