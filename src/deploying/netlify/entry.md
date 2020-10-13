@@ -1,7 +1,5 @@
-> This is an example of deploying an Ingrid site with [Netlify](https://netlify.com).
-
 ## Pre-requisites
-Netlify allows for continuous deployment from [Github](https://github.com), [Bitbucket](https://bitbucket.org), and [GitLab](https://gitlab.com) repositories. They've provided [some great documentation](https://docs.netlify.com/configure-builds/get-started/) to help you get started.
+Netlify offers integrations with [Github](https://github.com), [Bitbucket](https://bitbucket.org), and [GitLab](https://gitlab.com) repositories. You'll need an account and an active repository on one of these platforms. Netlify has provided [some great documentation](https://docs.netlify.com/configure-builds/get-started/) to help you get started connecting your repos.
 
 ### The repository should have at least two things in the root:
 - Your site's `src` folder
