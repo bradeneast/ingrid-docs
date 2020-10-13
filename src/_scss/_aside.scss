@@ -10,7 +10,6 @@ aside {
   width: $aside;
   margin: 0;
   padding: $flow1;
-  line-height: 1.2;
   background: var(--g7);
   font-size: 0.85em;
   overflow: hidden;
@@ -50,12 +49,19 @@ nav {
   align-self: end;
   padding: $flow1 0;
 
-  li {
+  * + * {
+    margin-top: $flow1 / 2;
+  }
+
+  li,
+  ul,
+  ol {
     list-style: none;
   }
 
   a {
-    color: var(--g3);
+    font-weight: inherit;
+    color: var(--g2);
     text-decoration: none;
   }
 
@@ -73,6 +79,7 @@ nav {
   }
 
   [aria-current] {
+    font-weight: $fontWeightMedium;
     color: var(--primary);
 
     &::after {

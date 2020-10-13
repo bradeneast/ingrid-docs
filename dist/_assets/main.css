@@ -1,10 +1,11 @@
+@charset "UTF-8";
 :root {
   --g0: #121518;
-  --g1: #1e232b;
+  --g1: #202227;
   --g2: #3a4049;
-  --g3: #5a6677;
-  --g4: #828b9c;
-  --g5: #9faabd;
+  --g3: #5c6674;
+  --g4: #808794;
+  --g5: #9ea4af;
   --g6: #c5cacf;
   --g7: #edeef1;
   --g8: white;
@@ -48,11 +49,11 @@ html.dark {
   --g0: white;
   --g1: #edeef1;
   --g2: #c5cacf;
-  --g3: #9faabd;
-  --g4: #828b9c;
-  --g5: #5a6677;
+  --g3: #9ea4af;
+  --g4: #808794;
+  --g5: #5c6674;
   --g6: #3a4049;
-  --g7: #1e232b;
+  --g7: #202227;
   --g8: #121518;
 }
 
@@ -153,7 +154,8 @@ ol {
 
 main li {
   margin-top: 0;
-  list-style-type: disc;
+  list-style-type: "◈";
+  padding-left: 0.37em;
 }
 
 blockquote {
@@ -211,7 +213,6 @@ aside {
   width: 16rem;
   margin: 0;
   padding: 1rem;
-  line-height: 1.2;
   background: var(--g7);
   font-size: 0.85em;
   overflow: hidden;
@@ -255,12 +256,19 @@ nav {
   padding: 1rem 0;
 }
 
-nav li {
+nav * + * {
+  margin-top: 0.5rem;
+}
+
+nav li,
+nav ul,
+nav ol {
   list-style: none;
 }
 
 nav a {
-  color: var(--g3);
+  font-weight: inherit;
+  color: var(--g2);
   text-decoration: none;
 }
 
@@ -278,6 +286,7 @@ nav > * ol {
 }
 
 nav [aria-current] {
+  font-weight: 600;
   color: var(--primary);
 }
 
