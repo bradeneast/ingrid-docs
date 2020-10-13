@@ -12,11 +12,6 @@
   --g8: #{$g8};
   --primary: #{$primary};
   --accent: #{$accent};
-  --fontWeightRegular: #{$fontWeightRegular};
-  --fontWeightMedium: #{$fontWeightMedium};
-  --fontWeightHeavy: #{$fontWeightHeavy};
-  --shadowColor: rgba(0, 0, 0, 0.3);
-  --shadow: 0 0.1rem 0.63rem -0.1rem var(--shadowColor);
   font-size: 18px;
 }
 
@@ -80,6 +75,11 @@ main {
   max-width: 48rem;
   padding: 5vw;
   padding-top: 0;
+
+  img {
+    border-radius: $borderRadius;
+    box-shadow: $shadow;
+  }
 }
 
 .grid,

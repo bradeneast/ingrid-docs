@@ -5,7 +5,6 @@ Bricks are small chunks of HTML (or Markdown) you can reuse throughout your stat
 Here's an example of how a Brick might be used for a simple homepage:
 
 ```html
-<!-- src/index.html -->
 <Brick use="/_bricks/template.html">
   <Title>Nostalgia Books</Title>
   <Content>
@@ -14,14 +13,13 @@ Here's an example of how a Brick might be used for a simple homepage:
 </Brick>
 ```
 
-The brick above has a `Title` property and a `Content` property. <em>Only direct children of the Brick will register as a property.</em>
+The brick above has a `Title` property and a `Content` property. It's `use` attribute points to an HTML file, so Ingrid will make sure that file exists, then import its contents.
 
-It's `use` attribute points to an HTML file, so Ingrid will make sure that file exists, then import its contents.
+*P.S. Only direct children of the Brick will register as a property.*
 
 Here's what the template might look like:
 
 ```html
-<!-- src/_bricks/template.html -->
 <body>
   <h1>
     <Slot name="Title"></Slot>
@@ -41,7 +39,6 @@ When this file gets imported, Ingrid tries to match up Slots with their correspo
 The resulting file will look like this:
 
 ```html
-<!-- dist/index.html -->
 <body>
   <h1>Nostalgia Books</h1>
   <main>

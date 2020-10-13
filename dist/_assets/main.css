@@ -10,11 +10,6 @@
   --g8: white;
   --primary: #ca994f;
   --accent: #9e7f50;
-  --fontWeightRegular: 400;
-  --fontWeightMedium: 600;
-  --fontWeightHeavy: 700;
-  --shadowColor: rgba(0, 0, 0, 0.3);
-  --shadow: 0 0.1rem 0.63rem -0.1rem var(--shadowColor);
   font-size: 18px;
 }
 
@@ -82,6 +77,12 @@ main {
   padding-top: 0;
 }
 
+main img {
+  border-radius: 0.2rem;
+  -webkit-box-shadow: 0 0.1rem 0.63rem -0.2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.1rem 0.63rem -0.2rem rgba(0, 0, 0, 0.3);
+}
+
 .grid * + *,
 .flex * + * {
   margin-top: 0;
@@ -130,13 +131,12 @@ a {
   font-weight: 600;
   text-decoration: underline;
   text-decoration-thickness: 0.1em;
-  -webkit-transition: 0.2s cubic-bezier(0.3, 0.3, 0.1, 1);
-  transition: 0.2s cubic-bezier(0.3, 0.3, 0.1, 1);
 }
 
 a:hover, a:focus {
   color: var(--accent);
-  text-decoration: underline;
+  -webkit-text-decoration-style: underline;
+          text-decoration-style: underline;
   -webkit-text-decoration-color: var(--g0);
           text-decoration-color: var(--g0);
 }
@@ -151,12 +151,14 @@ ol {
   margin-bottom: 2em;
 }
 
-li {
+main li {
+  margin-top: 0;
   list-style-type: disc;
 }
 
 blockquote {
   background: var(--g7);
+  color: var(--g2);
   border-radius: 0.2rem;
   padding: 1rem;
   border-left: 0.2rem solid var(--primary);
@@ -186,6 +188,14 @@ h1 {
 
 h2 {
   font-size: calc(1.1em + 1.1vmin);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--g2);
 }
 
 aside {
@@ -405,7 +415,7 @@ pre {
 }
 
 .token.string, .token.char, .token.attr-value, .token.atrule, .token.regex, .token.variable {
-  color: #7455bd;
+  color: #8d6bdd;
 }
 
 .token.string .rule, .token.char .rule, .token.attr-value .rule, .token.atrule .rule, .token.regex .rule, .token.variable .rule {
