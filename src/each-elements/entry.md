@@ -1,5 +1,6 @@
 Each's are placeholders for a list of pages you want to include. They're a rudimentary way to show all pages whose urls match a certain regular expression.
 
+## Attributes
 - `from`: The regular expression Ingrid will use to match page paths
 - `sort`: The page property to sort by (can be reversed with a preceding `-`)
 - `use`: A relative path to the template you want to use for each item
