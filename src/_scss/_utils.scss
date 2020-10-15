@@ -15,3 +15,20 @@
   display: flex;
   flex-flow: row wrap;
 }
+
+[href="undefined"] {
+  display: none;
+}
+
+.svg.fill {
+  fill: currentColor;
+}
+
+.svg.stroke path {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 0.2rem;
+  fill-rule: evenodd;
+}

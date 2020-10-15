@@ -142,14 +142,20 @@ a:hover, a:focus {
           text-decoration-color: var(--g0);
 }
 
-em {
-  color: var(--secondary);
-}
-
 ul,
 ol {
   padding-left: 1em;
   margin-bottom: 2em;
+}
+
+::-moz-selection {
+  background: var(--primary);
+  color: var(--g8);
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--g8);
 }
 
 main li {
@@ -351,6 +357,54 @@ nav [aria-current]::after {
           flex-flow: row wrap;
 }
 
+[href="undefined"] {
+  display: none;
+}
+
+.svg.fill {
+  fill: currentColor;
+}
+
+.svg.stroke path {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 0.2rem;
+  fill-rule: evenodd;
+}
+
+.next,
+.previous {
+  text-decoration: none;
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 0.2rem solid var(--g7);
+}
+
+.next::before,
+.previous::before {
+  color: var(--g5);
+}
+
+.next *,
+.previous * {
+  margin-top: 0;
+}
+
+.next {
+  text-align: right;
+  margin-left: auto;
+}
+
+.next::before {
+  content: "Next";
+}
+
+.previous::before {
+  content: "Previous";
+}
+
 code,
 pre {
   font-size: 0.96em;
@@ -416,7 +470,7 @@ pre {
 }
 
 .token.attr-name, .token.property, .token.class-name, .token.constant, .token.symbol {
-  color: #9e4737;
+  color: #aa5b4f;
 }
 
 .token.selector, .token.important, .token.keyword, .token.builtin {
@@ -424,7 +478,7 @@ pre {
 }
 
 .token.string, .token.char, .token.attr-value, .token.atrule, .token.regex, .token.variable {
-  color: #8d6bdd;
+  color: #726297;
 }
 
 .token.string .rule, .token.char .rule, .token.attr-value .rule, .token.atrule .rule, .token.regex .rule, .token.variable .rule {
