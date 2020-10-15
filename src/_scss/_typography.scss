@@ -27,14 +27,15 @@ a {
   }
 }
 
-em {
-  color: var(--secondary);
-}
-
 ul,
 ol {
   padding-left: 1em;
   margin-bottom: 2em;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--g8);
 }
 
 main li {
