@@ -1,0 +1,28 @@
+.next,
+.previous {
+  text-decoration: none;
+  margin-top: $flow4;
+  padding-top: $flow1;
+  border-top: $borderWidth $borderStyle var(--g7);
+
+  &::before {
+    color: var(--g5);
+  }
+
+  * {
+    margin-top: 0;
+  }
+}
+
+.next {
+  text-align: right;
+  margin-left: auto;
+
+  &::before {
+    content: "Next";
+  }
+}
+
+.previous::before {
+  content: "Previous";
+}
