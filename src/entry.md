@@ -29,5 +29,3 @@ To use a markdown file, just import it with a Brick. It will automatically be tr
 ```html
 <Brick use="./content.md"></Brick>
 ```
-
-That's it, yo. If you run into problems, [open an issue](https://github.com/bradeneast/ingrid/issues).
