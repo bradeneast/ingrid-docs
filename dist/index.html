@@ -37,11 +37,6 @@
   </a>
   
 </li><li>
-  <a href="/development-mode">
-    Development Mode
-  </a>
-  
-</li><li>
   <a href="/brick-elements">
     Brick Elements
   </a>
@@ -62,13 +57,13 @@
   </a>
   <ul>
       <li>
-  <a href="/deploying/github-pages">
-    Deploying to GitHub Pages
+  <a href="/deploying/netlify">
+    Deploying with Netlify
   </a>
   
 </li><li>
-  <a href="/deploying/netlify">
-    Deploying to Netlify
+  <a href="/deploying/vercel">
+    Deploying with Vercel
   </a>
   
 </li>
@@ -98,6 +93,7 @@
     <h1>
       Getting Started
     </h1>
+
     <h2 id="1-do-the-npm-thing-in-a-new-folder">1. Do the npm thing in a new folder</h2>
 <pre><code class="language-shell">npm init -y
 ...
@@ -105,11 +101,24 @@ npm i --save-dev ingrid-ssg</code></pre>
 <h2 id="2-run-ingrid">2. Run Ingrid</h2>
 <p><em>Make sure to use <code>npx</code>, not <code>npm</code>, if you’re slightly dyslexic like most of us.</em></p>
 <pre><code class="language-shell">npx ingrid</code></pre>
+<p>To use Ingrid’s development mode, just run Ingrid with the <code>-dev</code> flag.</p>
+<pre><code class="language-shell">npx ingrid -dev</code></pre>
+<p>This will start a live server at <a href="http://127.0.0.1:3000/">127.0.0.1:3000</a>, which automatically refreshes when files are modified in your project.</p>
 <h2 id="3-start-dropping-your-html-files-in-the-src-folder">3. Start dropping your HTML files in the <code>src</code> folder.</h2>
 <p>You can import components with <a href="/brick-elements">Brick elements</a>, or generate a content list with <a href="/each-elements">Each elements</a>.</p>
 <p>To use a markdown file, just import it with a Brick. It will automatically be transformed into HTML.</p>
 <pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Brick</span> <span class="token attr-name">use</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./content.md<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Brick</span><span class="token punctuation">></span></span></code></pre>
 <p>That’s it, yo. If you run into problems, <a href="https://github.com/bradeneast/ingrid/issues">open an issue</a>.</p>
+
+
+    <div class="flex">
+      <a class="previous" href="testing">
+        <h4>[object Object]</h4>
+      </a>
+      <a class="next" href="/brick-elements">
+        <h4>Brick Elements</h4>
+      </a>
+    </div>
 
   </main>
 

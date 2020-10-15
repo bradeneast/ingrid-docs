@@ -37,11 +37,6 @@
   </a>
   
 </li><li>
-  <a href="/development-mode">
-    Development Mode
-  </a>
-  
-</li><li>
   <a href="/brick-elements">
     Brick Elements
   </a>
@@ -62,13 +57,13 @@
   </a>
   <ul>
       <li>
-  <a href="/deploying/github-pages">
-    Deploying to GitHub Pages
+  <a href="/deploying/netlify">
+    Deploying with Netlify
   </a>
   
 </li><li>
-  <a href="/deploying/netlify">
-    Deploying to Netlify
+  <a href="/deploying/vercel">
+    Deploying with Vercel
   </a>
   
 </li>
@@ -98,10 +93,21 @@
     <h1>
       Interpolating Values
     </h1>
+
     <p>Double curly brackets let you access a value that you’ve stored globally or in a Brick property. These are generally less performant than Slots, but are sometimes necessary for things like <code>href</code> or <code>src</code> attributes.</p>
 <pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{FeaturedImage}}<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
 <h2 id="expressions">Expressions</h2>
 <p>Adding the <code>@</code> symbol before double curly brackets <code>@{{...}}</code> will tell Ingrid to evaluate their contents as a Javascript expression.</p>
+
+
+    <div class="flex">
+      <a class="previous" href="/each-elements">
+        <h4>Each Elements</h4>
+      </a>
+      <a class="next" href="/deploying">
+        <h4>Deploying</h4>
+      </a>
+    </div>
 
   </main>
 

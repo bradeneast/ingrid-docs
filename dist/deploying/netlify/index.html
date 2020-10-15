@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-    Ingrid | Deploying to Netlify
+    Ingrid | Deploying with Netlify
   </title>
 
   <link rel="stylesheet" href="/_assets/main.css">
@@ -37,11 +37,6 @@
   </a>
   
 </li><li>
-  <a href="/development-mode">
-    Development Mode
-  </a>
-  
-</li><li>
   <a href="/brick-elements">
     Brick Elements
   </a>
@@ -62,13 +57,13 @@
   </a>
   <ul>
       <li>
-  <a href="/deploying/github-pages">
-    Deploying to GitHub Pages
+  <a href="/deploying/netlify">
+    Deploying with Netlify
   </a>
   
 </li><li>
-  <a href="/deploying/netlify">
-    Deploying to Netlify
+  <a href="/deploying/vercel">
+    Deploying with Vercel
   </a>
   
 </li>
@@ -96,12 +91,40 @@
 
   <main>
     <h1>
-      Deploying to Netlify
+      Deploying with Netlify
     </h1>
-    <blockquote>
-<p>This is an example of deploying an Ingrid site with Netlify.</p>
-</blockquote>
-<h2 id="1-drop">1. Drop</h2>
+
+    <h2 id="pre-requisites">Pre-requisites</h2>
+<p>Netlify offers integrations with <a href="https://github.com">Github</a>, <a href="https://bitbucket.org">Bitbucket</a>, and <a href="https://gitlab.com">GitLab</a> repositories. You’ll need an account and an active repository on one of these platforms. Netlify has provided <a href="https://docs.netlify.com/configure-builds/get-started/">some great documentation</a> to help you get started connecting your repos.</p>
+<h3 id="the-repository-should-have-at-least-two-things-in-the-root">The repository should have at least two things in the root:</h3>
+<ul>
+<li>Your site’s <code>src</code> folder</li>
+<li>A <code>package.json</code> file with <code>ingrid-ssg</code> under <code>devDependencies</code></li>
+</ul>
+<h2 id="telling-netlify-how-to-build-the-project">Telling Netlify how to build the project</h2>
+<p>Find the “Build and Deploy” settings for your Netlify site.</p>
+<ul>
+<li>Set the Build Command to <code>npx ingrid</code></li>
+<li>Set the Publish Directory to <code>dist</code> or your custom public directory name, if you’ve overridden Ingrid’s default.</li>
+</ul>
+<p><img src="/_assets/images/netlify-deploy-settings__continuous-deployment.png" alt="Settings to use when deploying an Ingrid site to Netlify"></p>
+<h2 id="recommended-use-a-newer-nodejs-version">Recommended: Use a newer Node.js version</h2>
+<p>Netlify allows you to specify which Node.js version to use when building your site. Ingrid should work out of the box with Netlify, but setting a newer version of Node usually results in faster build times and easier debugging.</p>
+<ul>
+<li>Key: <code>NODE_VERSION</code></li>
+<li>Value: {Preferred version}</li>
+</ul>
+<p><img src="/_assets/images/netlify-deploy-settings__environment-variables.png" alt="An evironment variable specifying a recent version of Node.js on Netlify"></p>
+
+
+    <div class="flex">
+      <a class="previous" href="testing">
+        <h4>[object Object]</h4>
+      </a>
+      <a class="next" href="/deploying/vercel">
+        <h4>Deploying with Vercel</h4>
+      </a>
+    </div>
 
   </main>
 

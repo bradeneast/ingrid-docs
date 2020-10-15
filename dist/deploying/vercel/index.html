@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-    Ingrid | Development Mode
+    Ingrid | Deploying with Vercel
   </title>
 
   <link rel="stylesheet" href="/_assets/main.css">
@@ -37,11 +37,6 @@
   </a>
   
 </li><li>
-  <a href="/development-mode">
-    Development Mode
-  </a>
-  
-</li><li>
   <a href="/brick-elements">
     Brick Elements
   </a>
@@ -62,13 +57,13 @@
   </a>
   <ul>
       <li>
-  <a href="/deploying/github-pages">
-    Deploying to GitHub Pages
+  <a href="/deploying/netlify">
+    Deploying with Netlify
   </a>
   
 </li><li>
-  <a href="/deploying/netlify">
-    Deploying to Netlify
+  <a href="/deploying/vercel">
+    Deploying with Vercel
   </a>
   
 </li>
@@ -96,11 +91,34 @@
 
   <main>
     <h1>
-      Development Mode
+      Deploying with Vercel
     </h1>
-    <p>To use Ingrid’s development mode, just run Ingrid with the <code>-dev</code> flag.</p>
-<pre><code class="language-shell">npx ingrid -dev</code></pre>
-<p>This will start a live server at <a href="http://127.0.0.1:3000/">127.0.0.1:3000</a>, which automatically refreshes when files are modified in your project.</p>
+
+    <h2 id="pre-requisites">Pre-requisites</h2>
+<p>Vercel offers integrations with <a href="https://github.com">Github</a>, <a href="https://bitbucket.org">Bitbucket</a>, and <a href="https://gitlab.com">GitLab</a> repositories. You’ll need an account and an active repository on one of these platforms. Vercel has provided <a href="https://vercel.com/docs/git-integrations#quick-installation">some great documentation</a> to help you get started connecting your repos.</p>
+<h3 id="the-repository-should-have-at-least-two-things-in-the-root">The repository should have at least two things in the root:</h3>
+<ul>
+<li>Your site’s <code>src</code> folder</li>
+<li>A <code>package.json</code> file with <code>ingrid-ssg</code> under <code>devDependencies</code></li>
+</ul>
+<h2 id="telling-vercel-how-to-build-the-project">Telling Vercel how to build the project</h2>
+<p>Find the project settings for your Vercel site.</p>
+<p><img src="/_assets/images/vercel-settings__menu.png" alt="Settings menu in a Vercel project"></p>
+<ul>
+<li>Set the Build Command to <code>npx ingrid</code></li>
+<li>Set the Output Directory to <code>dist</code> or your custom public directory name, if you’ve overridden Ingrid’s default.</li>
+</ul>
+<p><img src="/_assets/images/vercel-deploy-settings__build.png" alt="Properly configured Vercel deploy settings"></p>
+
+
+    <div class="flex">
+      <a class="previous" href="/deploying/netlify">
+        <h4>Deploying with Netlify</h4>
+      </a>
+      <a class="next" href="testing">
+        <h4>[object Object]</h4>
+      </a>
+    </div>
 
   </main>
 

@@ -37,11 +37,6 @@
   </a>
   
 </li><li>
-  <a href="/development-mode">
-    Development Mode
-  </a>
-  
-</li><li>
   <a href="/brick-elements">
     Brick Elements
   </a>
@@ -62,13 +57,13 @@
   </a>
   <ul>
       <li>
-  <a href="/deploying/github-pages">
-    Deploying to GitHub Pages
+  <a href="/deploying/netlify">
+    Deploying with Netlify
   </a>
   
 </li><li>
-  <a href="/deploying/netlify">
-    Deploying to Netlify
+  <a href="/deploying/vercel">
+    Deploying with Vercel
   </a>
   
 </li>
@@ -98,23 +93,22 @@
     <h1>
       Brick Elements
     </h1>
+
     <p>Bricks are small chunks of HTML (or Markdown) you can reuse throughout your static site project. These are the cornerstone of Ingrid.</p>
 <blockquote>
 <p>If you’ve used React or something similar, it might be helpful to think of Bricks like components.</p>
 </blockquote>
 <p>Here’s an example of how a Brick might be used for a simple homepage:</p>
-<pre><code class="language-html"><span class="token comment">&lt;!-- src/index.html --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Brick</span> <span class="token attr-name">use</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/_bricks/template.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Brick</span> <span class="token attr-name">use</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/_bricks/template.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Title</span><span class="token punctuation">></span></span>Nostalgia Books<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Title</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Content</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>We sell those good books.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Content</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Brick</span><span class="token punctuation">></span></span></code></pre>
-<p>The brick above has a <code>Title</code> property and a <code>Content</code> property. <em>Only direct children of the Brick will register as a property.</em></p>
-<p>It’s <code>use</code> attribute points to an HTML file, so Ingrid will make sure that file exists, then import its contents.</p>
+<p>The brick above has a <code>Title</code> property and a <code>Content</code> property. It’s <code>use</code> attribute points to an HTML file, so Ingrid will make sure that file exists, then import its contents.</p>
+<p><em>P.S. Only direct children of the Brick will register as a property.</em></p>
 <p>Here’s what the template might look like:</p>
-<pre><code class="language-html"><span class="token comment">&lt;!-- src/_bricks/template.html --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Slot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Slot</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
@@ -127,8 +121,7 @@
 <p>Slots are placeholders for the properties of a Brick.</p>
 <p>When this file gets imported, Ingrid tries to match up Slots with their corresponding Brick properties.</p>
 <p>The resulting file will look like this:</p>
-<pre><code class="language-html"><span class="token comment">&lt;!-- dist/index.html --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>Nostalgia Books<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>We sell those good books.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
@@ -147,6 +140,16 @@
 <p>The raw text/html content of the current file</p>
 </li>
 </ul>
+
+
+    <div class="flex">
+      <a class="previous" href="/">
+        <h4>Getting Started</h4>
+      </a>
+      <a class="next" href="/each-elements">
+        <h4>Each Elements</h4>
+      </a>
+    </div>
 
   </main>
 
