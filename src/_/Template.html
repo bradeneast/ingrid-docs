@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<Brick use="/_/Head.html">
+<Import use="/_/Head.html">
   <Title>
     <Slot name="Title"></Slot>
   </Title>
-</Brick>
+</Import>
 
 <body>
 
@@ -22,7 +22,7 @@
       <img width="120" height="120" src="/_assets/logo.svg" alt="Ingrid Logo" />
     </div>
 
-    <Brick use="/_/Nav.html"></Brick>
+    <Import use="/_/Nav.html"></Import>
 
   </aside>
 
@@ -31,14 +31,14 @@
       <Slot name="Title"></Slot>
     </h1>
 
-    <Brick use="./entry.md"></Brick>
+    <Import use="./entry.md"></Import>
 
     <div class="flex">
-      <a class="previous" href="{{sys.previous.sys.href}}">
-        <h3>{{sys.previous.Title}}</h3>
+      <a class="previous" href="{*sys.previous.sys.href*}">
+        <h3>{* sys.previous.Title *}</h3>
       </a>
-      <a class="next" href="{{sys.next.sys.href}}">
-        <h3>{{sys.next.Title}}</h3>
+      <a class="next" href="{*sys.next.sys.href*}">
+        <h3>{* sys.next.Title *}</h3>
       </a>
     </div>
 

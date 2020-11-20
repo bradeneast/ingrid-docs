@@ -22,10 +22,10 @@ This will start a live server at [127.0.0.1:3000](http://127.0.0.1:3000/), which
 
 ## 3. Start dropping your HTML files in the `src` folder.
 
-You can import components with [Brick elements](/brick-elements), or generate a content list with [Each elements](/each-elements).
+You can import components with [Import elements](/Import-elements), or generate a content list with [Each elements](/each-elements).
 
-To use a markdown file, just import it with a Brick. It will automatically be transformed into HTML.
+To use a markdown file, just import it with a Import. It will automatically be transformed into HTML.
 
 ```html
-<Brick use="./content.md"></Brick>
+<Import use="./content.md"></Import>
 ```

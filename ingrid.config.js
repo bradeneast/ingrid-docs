@@ -3,7 +3,7 @@ module.exports = {
 	dist: "./dist", // The public directory where your site build is output
 	ignorePattern: /^_/, // By default, files and directories whose names begin with an underscore "_" are ignored
 	global: {
-		openExp: '{{',
-		closeExp: '}}',
-	}, // An object of values that can be interpolated anywhere in your site using double curly braces: {{example_value}}
+		openExp: '{*',
+		closeExp: '*}',
+	}, // An object of values that can be interpolated anywhere in your site using starburns syntax: {* example_value *}
 }

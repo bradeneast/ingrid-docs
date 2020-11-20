@@ -37,8 +37,8 @@
   </a>
   
 </li><li>
-  <a href="/brick-elements">
-    Brick Elements
+  <a href="/import-elements">
+    Import Elements
   </a>
   
 </li><li>
@@ -102,10 +102,10 @@
 <li><code>use</code>: A relative path to the template you want to use for each item</li>
 </ul>
 <pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Each</span> <span class="token attr-name">from</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>books/.+?/<span class="token punctuation">"</span></span> <span class="token attr-name">sort</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>BookRating<span class="token punctuation">"</span></span> <span class="token attr-name">use</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/_bricks/book.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Each</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Each</span> <span class="token attr-name">from</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>books/.+?/<span class="token punctuation">"</span></span> <span class="token attr-name">sort</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>BookRating<span class="token punctuation">"</span></span> <span class="token attr-name">use</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/_Imports/book.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Each</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span></code></pre>
 <p>For the example above, Ingrid would import and hydrate the file below for each book.</p>
-<pre><code class="language-html"><span class="token comment">&lt;!-- src/_bricks/book.html --></span>
+<pre><code class="language-html"><span class="token comment">&lt;!-- src/_Imports/book.html --></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Slot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>BookTitle<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Slot</span><span class="token punctuation">></span></span>
@@ -130,8 +130,8 @@
 
 
     <div class="flex">
-      <a class="previous" href="/brick-elements">
-        <h3>Brick Elements</h3>
+      <a class="previous" href="/import-elements">
+        <h3>Import Elements</h3>
       </a>
       <a class="next" href="/interpolating-values">
         <h3>Interpolating Values</h3>

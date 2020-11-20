@@ -7,14 +7,14 @@ Each's are placeholders for a list of pages you want to include. They're a rudim
 
 ```html
 <ul>
-  <Each from="books/.+?/" sort="BookRating" use="/_bricks/book.html"></Each>
+  <Each from="books/.+?/" sort="BookRating" use="/_Imports/book.html"></Each>
 </ul>
 ```
 
 For the example above, Ingrid would import and hydrate the file below for each book.
 
 ```html
-<!-- src/_bricks/book.html -->
+<!-- src/_Imports/book.html -->
 <li>
   <h3>
     <Slot name="BookTitle"></Slot>
