@@ -99,13 +99,15 @@
 <p>If you’ve used React or something similar, it might be helpful to think of Imports like components.</p>
 </blockquote>
 <p>Here’s an example of how an Import might be used for a simple homepage:</p>
-<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Import</span> <span class="token attr-name">use</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/_Imports/template.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Import</span> <span class="token attr-name">from</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/_imports/Template.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Title</span><span class="token punctuation">></span></span>Nostalgia Books<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Title</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Content</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>We sell those good books.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Content</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Import</span><span class="token punctuation">></span></span></code></pre>
-<p>The Import above has a <code>Title</code> property and a <code>Content</code> property. It’s <code>use</code> attribute points to an HTML file, so Ingrid will make sure that file exists, then import its contents.</p>
+<p>You can also treat <code>Import</code> elements as self-closing. This is helpful if you’re importing a static component and not passing any properties through child elements as shown above.</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Import</span> <span class="token attr-name">from</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/_imports/Footer.html<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p>The Import above has a <code>Title</code> property and a <code>Content</code> property. It’s <code>from</code> attribute points to an HTML file, so Ingrid will make sure that file exists, then import its contents.</p>
 <p><em>P.S. Only direct children of the Import will register as a property.</em></p>
 <p>Here’s what the template might look like:</p>
 <pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>

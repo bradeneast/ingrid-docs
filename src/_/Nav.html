@@ -1,7 +1,7 @@
 <nav>
 
   <ul>
-    <Each from="^/([^/]+/?)?$" sort="Priority" use="/_/NavItem.html"></Each>
+    <Each match="^/([^/]+/?)?$" sort="Priority" from="/_/NavItem.html" />
   </ul>
 
   <div class="toggles">

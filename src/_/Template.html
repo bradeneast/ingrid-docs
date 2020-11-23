@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<Import use="/_/Head.html">
+<Import from="/_/Head.html">
   <Title>
     <Slot name="Title"></Slot>
   </Title>
@@ -22,7 +22,7 @@
       <img width="120" height="120" src="/_assets/logo.svg" alt="Ingrid Logo" />
     </div>
 
-    <Import use="/_/Nav.html"></Import>
+    <Import from="/_/Nav.html" />
 
   </aside>
 
@@ -31,7 +31,7 @@
       <Slot name="Title"></Slot>
     </h1>
 
-    <Import use="./entry.md"></Import>
+    <Import from="./entry.md" />
 
     <div class="flex">
       <a class="previous" href="{*sys.previous.sys.href*}">

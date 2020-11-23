@@ -1,9 +1,9 @@
-<Import use="/_/Template.html">
+<Import from="/_/Template.html">
   <Title>Deploying</Title>
   <Priority>8</Priority>
   <Children>
     <ul>
-      <Each from="/deploying/.+?" sort="Priority" use="/_/NavItem.html"></Each>
+      <Each match="/deploying/.+?" sort="Priority" from="/_/NavItem.html"></Each>
     </ul>
   </Children>
 </Import>

@@ -97,7 +97,11 @@
     <p>Asterisks inside of curly braces let you access a value that you’ve stored globally or in an Import property. These are generally less performant than Slots, but are sometimes necessary for things like <code>href</code> or <code>src</code> attributes.</p>
 <pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{*FeaturedImage*}<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
 <h2 id="expressions">Expressions</h2>
-<p>Using the <code>*</code> symbol instead of a percentage sign will <code>{%...%}</code> will tell Ingrid to evaluate their contents as a Javascript expression.</p>
+<p>Using the <code>%</code> symbol instead of an asterisk will tell Ingrid to evaluate their contents as a Javascript expression.</p>
+<pre><code class="language-html">This post is {% Body.split(" ").length %} words long
+
+<span class="token comment">&lt;!-- Result --></span>
+This post is 255 words long.</code></pre>
 
 
     <div class="flex">

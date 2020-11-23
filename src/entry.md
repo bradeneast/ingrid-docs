@@ -7,6 +7,14 @@ npm i --save-dev ingrid-ssg
 
 
 ## 2. Run Ingrid
+
+### In a project:
+```javascript
+const Ingrid = require('ingrid-ssg');
+new Ingrid().build();
+```
+
+### In the terminal:
 *Make sure to use `npx`, not `npm`, if you're slightly dyslexic like most of us.*
 ```shell
 npx ingrid
@@ -27,5 +35,5 @@ You can import components with [Import elements](/Import-elements), or generate 
 To use a markdown file, just import it with a Import. It will automatically be transformed into HTML.
 
 ```html
-<Import use="./content.md"></Import>
+<Import from="./content.md"></Import>
 ```
