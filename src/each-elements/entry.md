@@ -7,7 +7,7 @@ Each's are placeholders for a list of pages you want to include. They're a rudim
 
 ```html
 <ul>
-  <Each from="/_imports/Book.html" match="books/.+?/" sort="BookRating" />
+  <Each from="/_imports/Book.html" match="books/.+?/" sort="BookRating"></Each>
 </ul>
 ```
 
