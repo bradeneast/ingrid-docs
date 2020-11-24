@@ -13,12 +13,6 @@ Here's an example of how an Import might be used for a simple homepage:
 </Import>
 ```
 
-You can also treat `Import` elements as self-closing. This is helpful if you're importing a static component and not passing any properties through child elements as shown above.
-
-```html
-<Import from="/_imports/Footer.html"></Import>
-```
-
 The Import above has a `Title` property and a `Content` property. It's `from` attribute points to an HTML file, so Ingrid will make sure that file exists, then import its contents.
 
 *P.S. Only direct children of the Import will register as a property.*

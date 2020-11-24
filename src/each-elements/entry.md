@@ -28,12 +28,12 @@ The result would look something like this:
 ```html
 <ul>
   <li>
-    <h3>The Magician's Nephew</h3>
-    Rating: 4 stars
-    </li>
-  <li>
     <h3>The Giver</h3>
     Rating: 5 stars
+  </li>
+  <li>
+    <h3>The Magician's Nephew</h3>
+    Rating: 4 stars
   </li>
   <li>
     <h3>Where the Red Fern Grows</h3>

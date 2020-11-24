@@ -16,5 +16,6 @@
         "silent": true
       }
     ]
-  }
+  },
+  "liveServer.settings.port": 5501
 }
