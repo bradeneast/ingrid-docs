@@ -14,9 +14,7 @@ For the example above, Ingrid would import and hydrate the file below for each b
 ```html
 <!-- src/_imports/Book.html -->
 <div>
-  <h3>
-    <Slot name="BookTitle"></Slot>
-  </h3>
+  <h3><Slot name="BookTitle"></Slot></h3>
   Rating: <Slot name="BookRating"></Slot> stars
 </div>
 ```
