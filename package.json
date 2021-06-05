@@ -12,6 +12,6 @@
   },
   "homepage": "https://github.com/bradeneast/ingrid-docs#readme",
   "devDependencies": {
-    "ingrid-ssg": "^2.0.4"
+    "ingrid-ssg": "^4.0.0"
   }
 }
